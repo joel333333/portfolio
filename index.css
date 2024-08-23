@@ -20,4 +20,217 @@ h1{
 }
 #home {
     padding: 100px;
+    padding-bottom: 100px;
 }
+
+.quote{
+    border: 2px solid black;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    padding: 10px;
+} 
+button {
+    font-size: 1.4em;
+    padding: 0.6em 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #000000b4;
+  }
+  
+  .container {
+    position: relative;
+    padding: 3px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    border-radius: 0.9em;
+    transition: all 0.4s ease;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.9em;
+    z-index: -10;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+  }
+  
+  .container:hover::before {
+    background: linear-gradient(90deg, #03a9f4, #f441a5);
+    filter: blur(1.2em);
+  }
+  .container:active::before {
+    filter: blur(0.2em);
+  }
+
+/* From Uiverse.io by mobinkakei */ 
+.btnn {
+    --color1: black;
+    --color2: white;
+    perspective: 1000px;
+    padding: 1em 1em;
+    background: linear-gradient(var(--color1), var(--color2));
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+    text-shadow: 0 10px 10px #000;
+    cursor: pointer;
+    transform: rotateX(70deg) rotateZ(30deg);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    margin: 50px;
+  }
+  
+  .btnn::before {
+    content: "";
+    width: 100%;
+    height: 15px;
+    background-color: var(--color2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+  }
+  
+  .btnn::after {
+    content: "";
+    width: 15px;
+    height: 100%;
+    background-color: var(--color1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotateY(-90deg);
+    transform-origin: right;
+  }
+  
+  .btnn:hover {
+    transform: rotateX(30deg) rotateZ(0);
+  }
+  
+  /* From Uiverse.io by mrhyddenn */ 
+.uiverse {
+    position: relative;
+    background: #ffffff;
+    color: #000;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .uiverse:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  svg:hover span,
+  svg:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .uiverse:hover,
+  .uiverse:hover .tooltip,
+  .uiverse:hover .tooltip::before {
+    background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
+    color: #ffffff;
+  }
+  
+  #j {
+    height: 90px;
+  }
+  #jj {
+    height: 115px;
+  }
+  /* From Uiverse.io by vinodjangid07 */ 
+.Btnnn {
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+    background-size: 250%;
+    background-position: left;
+    color: #940707;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 1s;
+    overflow: hidden;
+  }
+  
+  .Btnnn::before {
+    position: absolute;
+    content: "SUBMIT";
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 90%;
+    border-radius: 8px;
+    transition-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.842);
+    background-size: 200%;
+  }
+  
+  .Btnnn:hover {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .Btnnn:hover::before {
+    background-position: right;
+    transition-duration: 1s;
+  }
+  
+  .Btnnn:active {
+    transform: scale(0.95);
+  }
